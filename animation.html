@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+</head>
+
+
+
+
+<body>
+    <div class=" container">
+        <div class="fn">
+            <button onclick="toggleBlock()">Block</button>
+            <button onclick="toggleBlock('infinite')">Block Infinite</button>
+            <button onclick="toggleRun()">RunRunRun</button>
+        </div>
+        <div class="wrap">
+            <div class="block change-color property">
+                text
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrap">
+            <div class="info-wrap">
+                <div class="info-item t1">
+                    aaaa
+                </div>
+                <div class="info-item t2">
+                    BBBBB
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="wrap">
+            <div class="runrunrun">
+                123....
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const blockEl = document.querySelector('.block');
+    function toggleBlock(append) {
+        if (blockEl.classList.contains('change-color')) {
+            blockEl.classList.remove('change-color');
+            blockEl.classList.remove('append');
+        } else {
+            blockEl.classList.add('change-color');
+            blockEl.classList.add(append);
+        }
+    }
+    const runEl = document.querySelector('.runrunrun');
+    function toggleRun(append) {
+        if (runEl.classList.contains('active')) {
+            runEl.classList.remove('active');
+        } else {
+            runEl.classList.add('active');
+        }
+    }
+</script>
+
+</html>
